@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Google Directions
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="floating-panel">
+    <ion-list>
+        <ion-item>
+            <ion-input (click)="showAddressModalFrom()" [(ngModel)]="address.place" type="text" placeholder="From" id="start" />
+        </ion-item>  
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-input (click)="showAddressModalTo()" [(ngModel)]="address.place" type="text" placeholder="To" id="end" />
+        </ion-item>  
+    </ion-list>
+    </div>
+    <div #map id="map"></div>
+</ion-content>
